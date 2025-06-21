@@ -6,7 +6,7 @@
 
  # Look for the application .desktop files names in the directory
 
- KEEP_FILES=("cool-retro-term" "org.qutebrowser.qutebrowser" "librewolf" "discord" "idea" "pycharm" "minecraft-launcher" "libreoffice-calc" "libreoffice-impress" "libreoffice-writer" "pix" "org.kde.ark" "org.gnome.Settings" "org.kde.haruna" "com.mattjakeman.ExtensionManager" "arduino-ide" "mysql-workbench" "org.gnome.Shell")
+ KEEP_FILES=("discord" "firefox" "pix") # For example 
 
  cd "$DIRECTORY" || exit
 

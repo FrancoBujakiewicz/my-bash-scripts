@@ -3,7 +3,9 @@
  # Automatizes a git upload, just adds all changes file paths (Any changes, untracked, modified, etc).
  # Mostly useful if you don't care branches or specific files to add, just adding entire changes. 
 
- cd $LATTE_PATH
+ $REPO_PATH = "/path/to/your/repo"
+
+ cd $REPO_PATH
 
  files_paths=()
 
@@ -26,7 +28,7 @@
 
  for path in "${files_paths[@]}"; do 
 
-     echo "$path" 
+     echo "Added:${path}!" 
      git add "$path" 
  
  done	 
