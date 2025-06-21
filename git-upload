@@ -20,7 +20,7 @@
    
  done <<< $git_status 
 
- if [ ${#files_paths[@]} -eq -1 ]; then 
+ if [ ${#files_paths[@]} -eq 0 ]; then 
 	 
      exit 1
 
@@ -38,5 +38,15 @@
 
  git commit -m "$message"
 
+ while true; do
+
  git push origin main
+
+ if [ $? -eq 0  ]; then 
+
+    break
+
+ fi
+
+ done
 
