@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ # A basic way of auth to no use a display manager, after start the graphical environment
+ # Can be not so secure, but works.
+
+ sleep 1 # Wait for DE/WM starts.
+
+ while true; do
+
+ pkexec # Blocks screen until you input the correct password.
+    
+ if [ $? -eq 0 ]; then
+        
+      break
+
+ fi
+
+ done
+

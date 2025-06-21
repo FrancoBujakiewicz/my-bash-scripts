@@ -1,0 +1,22 @@
+#!/bin/bash
+
+ # This directory contains desktop entries for applications, if your applications works without them,  # you can delete them to clean an application launcher, letting just the apps you want. When the apps # are updated regenerates the desktop entries, the reason for the scritp itself.
+
+ DIRECTORY="/usr/share/applications/"
+
+ # Look for the application .desktop files names in the directory
+
+ KEEP_FILES=("cool-retro-term" "org.qutebrowser.qutebrowser" "librewolf" "discord" "idea" "pycharm" "minecraft-launcher" "libreoffice-calc" "libreoffice-impress" "libreoffice-writer" "pix" "org.kde.ark" "org.gnome.Settings" "org.kde.haruna" "com.mattjakeman.ExtensionManager" "arduino-ide" "mysql-workbench" "org.gnome.Shell")
+
+ cd "$DIRECTORY" || exit
+
+ for file in *.desktop; do
+
+  if [[ ! " ${KEEP_FILES[@]} " =~ " ${file%.desktop} " ]]; then
+
+     rm -f "$file"
+       
+  fi
+
+ done
+
