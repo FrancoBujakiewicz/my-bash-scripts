@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ # I don't know if pix have a option to defualt dir when it starts. But to access to "special" images  # ;) I do this for see it and when close pix try to change the image directory opening it again.
+ # Is just an idea a prototype, don't works for now.
+
+ pix /home/franco/.images &
+
+ pid=$!
+
+ wait $pid
+
+ pix /home/franco &
+
+ pid=$!
+
+ sleep 1
+
+ kill $pid
+
